@@ -5,10 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
   <script src="https://kit.fontawesome.com/a399c12577.js" crossorigin="anonymous"></script>
   <title>Gaurang Khera - Developer, Programmer, Student</title>
 </head>
 <body>
+  <div class="mode">            
+    <center><span class="change">☽</span></center>
+</div>
   <div class="container">
     <div class="sidebar sidebarGo">
       <nav>
@@ -45,6 +51,18 @@
               <i class="fas fa-search"></i>
           </a>    
       </div>
+
+      <script>
+        $( ".change" ).on("click", function() {
+            if( $( "body" ).hasClass( "dark" )) {
+                $( "body" ).removeClass( "dark" );
+                $( ".change" ).text( "☽" ).color("black");
+            } else {
+                $( "body" ).addClass( "dark" );
+                $( ".change" ).text( "☼" ).color;
+            }
+        });
+    </script>
         <script src="script.js"></script>
 </body>
 </html>
