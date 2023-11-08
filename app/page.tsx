@@ -33,10 +33,10 @@ export default function Home() {
 	<>
 		<section className="flex flex-col mt-32 items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>I'm&nbsp;</h1>
+				<h1 className={title()}>I&apos;m&nbsp;</h1>
 				<h1 className={title({ color: "green" })} ref={typedRef}></h1>
 				<h2 className="mt-4 text-md">
-				Hi, I'm Gaurang! I'm a highschool freshman who loves to code. I'm a full-stack web developer, and I'm currently working on a few projects. I'm also a math enthusiast, and I also like playing the Sitar, a traditional Indian instrument.
+				Hi, I&apos;m Gaurang! I&apos;m a highschool freshman who loves to code. I&apos;m a full-stack web developer, and I&apos;m currently working on a few projects. I&apos;m also a math enthusiast, and I also like playing the Sitar, a traditional Indian instrument.
 				</h2>
 			</div>
 
@@ -52,10 +52,10 @@ export default function Home() {
 
 		<section id="introduction" className="mt-64 flex flex-col items-center space-y-4">
 			<h1 className="text-4xl font-bold mb-4 text-center">Introduction</h1>
-			<p className="text-lg text-center">I'm a budding full-stack web developer and machine learning engineer, passionate about creating impactful and intuitive digital experiences. My enthusiasm for technology, combined with a thirst for knowledge, drives my constant exploration and learning in various fields. From understanding complex mathematical concepts to implementing them in algorithms and code, I find joy in the challenges that each project presents.</p>
+			<p className="text-lg text-center">I&apos;m a budding full-stack web developer and machine learning engineer, passionate about creating impactful and intuitive digital experiences. My enthusiasm for technology, combined with a thirst for knowledge, drives my constant exploration and learning in various fields. From understanding complex mathematical concepts to implementing them in algorithms and code, I find joy in the challenges that each project presents.</p>
 
 			<div className="p-4 w-3/4">
-      <h2 className="text-2xl font-bold mb-4">Technologies I've worked with</h2>
+      <h2 className="text-2xl font-bold mb-4">Technologies I&apos;ve worked with</h2>
 
       <div className="mb-8">
         <h3 className="text-lg font-semibold mb-2">Web Development</h3>

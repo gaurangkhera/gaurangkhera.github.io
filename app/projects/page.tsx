@@ -32,10 +32,10 @@ export default function ProjectsPage() {
     return (
         <div>
             <h1 className={title()}>My projects</h1>
-            <p className={subtitle()}>I've built a variety of projects over the years. From building simple ecommerce platforms, to complex SaaS apps.</p>
+            <p className={subtitle()}>I&apos;ve built a variety of projects over the years. From building simple ecommerce platforms, to complex SaaS apps.</p>
             <div className='grid grid-cols-3 gap-4 mt-16'>
                 {projects.map(project => (
-                    <Card className="max-w-[400px]">
+                    <Card key={project.id} className="max-w-[400px]">
                         <CardHeader className="gap-3">
                             <div className="flex flex-col">
                                 <p className="font-semibold text-md">{project.name}</p>
