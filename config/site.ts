@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "Pay.io",
+	name: "Gaurang Khera",
 	description: "Pay securely, wherever, whenever, however & to whoever.",
 	navItems: [
 		{
