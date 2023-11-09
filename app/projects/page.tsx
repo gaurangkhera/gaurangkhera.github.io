@@ -9,6 +9,7 @@ interface Project {
     id: number;
     name: string;
     description: string;
+    clone_url: string;
 }
 
 export default function ProjectsPage() {
@@ -26,9 +27,6 @@ export default function ProjectsPage() {
                 setProjects(filteredProjects);
             });
     }, []);
-    
-
-
     return (
         <div>
             <h1 className={title()}>My projects</h1>
@@ -51,7 +49,7 @@ export default function ProjectsPage() {
                         <CardFooter>
                             <Link
                                 showAnchorIcon
-                                href="https://github.com/nextui-org/nextui"
+                                href={project.clone_url}
                             >
                                 GitHub
                             </Link>

@@ -12,8 +12,7 @@ import Typed from "typed.js";
 import React, { useEffect } from "react";
 import { Progress } from "@nextui-org/progress";
 
-export default function Home() {
-
+export default function Home() {  
 	const typedRef = React.useRef(null);
 
 	React.useEffect(() => {
@@ -21,6 +20,7 @@ export default function Home() {
 		  strings: ['a full-stack web developer.', 'also a math enthusiast.', 'also a student.'],
 		  typeSpeed: 75,
 		  backSpeed: 50,
+      loop: true,
 		});
 	
 		return () => {
