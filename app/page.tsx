@@ -50,7 +50,7 @@ export default function Home() {
 			</div>
 		</section>
 
-		<section id="introduction" className="mt-64 flex flex-col items-center space-y-4">
+		<section id="introduction" className="mt-72 flex flex-col items-center space-y-4">
 			<h1 className="text-4xl font-bold mb-4 text-center">Introduction</h1>
 			<p className="text-lg text-center">I&apos;m a budding full-stack web developer and machine learning engineer, passionate about creating impactful and intuitive digital experiences. My enthusiasm for technology, combined with a thirst for knowledge, drives my constant exploration and learning in various fields. From understanding complex mathematical concepts to implementing them in algorithms and code, I find joy in the challenges that each project presents.</p>
 

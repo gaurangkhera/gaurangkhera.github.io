@@ -16,7 +16,7 @@ export default function ProjectsPage() {
     const [projects, setProjects] = useState<Project[]>([]);
 
     useEffect(() => {
-        fetch('https://api.github.com/users/gaurangkhera5188/repos')
+        fetch('https://api.github.com/users/gaurangkhera/repos')
             .then(response => response.json())
             .then(data => {
                 //@ts-ignore
@@ -30,8 +30,8 @@ export default function ProjectsPage() {
     return (
         <div>
             <h1 className={title()}>My projects</h1>
-            <p className={subtitle()}>I&apos;ve built a variety of projects over the years. From building simple ecommerce platforms, to complex SaaS apps.</p>
-            <div className='grid grid-cols-3 gap-4 mt-16'>
+            <p className={subtitle()}>I&apos;ve built a variety of projects over the years. From simple ecommerce platforms, to complex SaaS apps, I've built them all. You can check out a few of my projects here.</p>
+            <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-4 mt-16'>
                 {projects.map(project => (
                     <Card key={project.id} className="max-w-[400px]">
                         <CardHeader className="gap-3">
