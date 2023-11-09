@@ -37,10 +37,10 @@ const Page = () => {
         <h1 className={title()}>Contact me</h1>
         <h2 className={subtitle()}>Have a question? Contact me here.</h2>
 
-        <Input variant="bordered" value={firstName} required onChange={(e) => setName(e.target.value)} placeholder="Name" className="my-4" />
-        <Input variant="bordered" value={email} required onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="my-4" />
-        <Input variant="bordered" value={subject} required onChange={(e) => setSubject(e.target.value)} placeholder="Subject" className="my-4" />
-        <Textarea variant="bordered" value={content} required onChange={(e) => setContent(e.target.value)} placeholder="Content" className="my-4" />
+        <Input variant="bordered" value={firstName} type="text" required onChange={(e) => setName(e.target.value)} placeholder="Name" className="my-4" />
+        <Input variant="bordered" value={email} type="email" required onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="my-4" />
+        <Input variant="bordered" value={subject} type="text" required onChange={(e) => setSubject(e.target.value)} placeholder="Subject" className="my-4" />
+        <Textarea variant="bordered" value={content} type="text" required onChange={(e) => setContent(e.target.value)} placeholder="Content" className="my-4" />
         <Button disabled={submitting} onClick={() => submitForm()} color="success">{submitting ? (
             <><Loader2 className="w-4 h-4 animate-spin" />Sending</> 
         ) : (
