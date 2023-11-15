@@ -14,14 +14,16 @@ import { Link } from "@nextui-org/react";
 import { ThemeSwitch } from "@/components/theme-switch";
 import NextLink from "next/link";
 import { Mail } from "lucide-react";
+import { useRouter } from 'next/router';
 
 export const Navbar = () => {
+
 	return (
 		<NextUINavbar isBordered>
 			<NavbarContent className="sm:hidden" justify="start">
 				<NavbarMenuToggle />
 			</NavbarContent>
-			<NavbarContent className="hidden sm:flex gap-4" justify="center">
+			<NavbarContent className="hidden sm:flex gap-4 clash font-medium" justify="center">
 				<NavbarBrand>
 					<NextLink href="/">Home</NextLink>
 				</NavbarBrand>
@@ -40,7 +42,7 @@ export const Navbar = () => {
 				<NavbarItem>
 					<Button
 						as={Link}
-						className="text-sm font-normal text-default-600 bg-default-100"
+						className="text-sm clash font-medium text-default-600 bg-default-100"
 						href={'/contact'}
 						startContent={<Mail className="w-5 h-5" />}
 						variant="flat"

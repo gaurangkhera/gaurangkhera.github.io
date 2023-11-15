@@ -11,6 +11,7 @@ import { ArrowDown, ArrowRight } from "lucide-react";
 import Typed from "typed.js";
 import React, { useEffect } from "react";
 import { Progress } from "@nextui-org/progress";
+import clsx from "clsx";
 
 export default function Home() {  
 	const typedRef = React.useRef(null);
@@ -33,8 +34,8 @@ export default function Home() {
 	<>
 		<section className="flex flex-col mt-32 items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>I&apos;m&nbsp;</h1>
-				<h1 className={title({ color: "green" })} ref={typedRef}></h1>
+				<h1 className={clsx(title(), 'clash')}>I&apos;m&nbsp;</h1>
+				<h1 className={clsx(title({ color: "green" }), 'clash')} ref={typedRef}></h1>
 				<h2 className="mt-4 text-md">
 				Hi, I&apos;m Gaurang! I&apos;m a highschool freshman who loves to code. I&apos;m a full-stack web developer, and I&apos;m currently working on a few projects. I&apos;m also a math enthusiast, and I also like playing the Sitar, a traditional Indian instrument.
 				</h2>
