@@ -10,13 +10,13 @@ import React from "react";
 import { Progress } from "@nextui-org/progress";
 import clsx from "clsx";
 
-const ProgressBar = ({ label, value }) => {
+const ProgressBar = ({ label, value }: any) => {
   const [active, setActive] = React.useState(false);
 
   return (
     <VisibilitySensor
       partialVisibility
-      onChange={(isVisible) => {
+      onChange={(isVisible: any) => {
         if (isVisible) {
           setActive(true);
         }
@@ -28,7 +28,7 @@ const ProgressBar = ({ label, value }) => {
           value={active ? value : 0}
           color="success"
           className="w-3/4"
-          striped
+          //@ts-ignore
           animated={active}
           style={{ height: "20px", borderRadius: "10px" }}
         />
