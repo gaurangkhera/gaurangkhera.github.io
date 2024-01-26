@@ -3,6 +3,7 @@
 import { subtitle, title } from "@/components/primitives"
 import { Button } from "@nextui-org/button";
 import { Input, Textarea } from "@nextui-org/react"
+import clsx from "clsx";
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Toaster, toast } from 'sonner'
@@ -34,18 +35,20 @@ const Page = () => {
     return(
         <>
         <Toaster richColors />
-        <h1 className={title()}>Contact me</h1>
+        <h1 className={clsx(title(), 'clash')}>Contact me</h1>
         <h2 className={subtitle()}>Have a question? Contact me here.</h2>
 
-        <Input variant="bordered" value={firstName} type="text" required onChange={(e) => setName(e.target.value)} placeholder="Name" className="my-4" />
-        <Input variant="bordered" value={email} type="email" required onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="my-4" />
-        <Input variant="bordered" value={subject} type="text" required onChange={(e) => setSubject(e.target.value)} placeholder="Subject" className="my-4" />
-        <Textarea variant="bordered" value={content} type="text" required onChange={(e) => setContent(e.target.value)} placeholder="Content" className="my-4" />
-        <Button disabled={submitting} onClick={() => submitForm()} color="success">{submitting ? (
-            <><Loader2 className="w-4 h-4 animate-spin" />Sending</> 
-        ) : (
-            <>Send</>
-        )}</Button>
+        <form className="flex flex-col space-y-4">
+            <Input variant="bordered" value={firstName} type="text" required onChange={(e) => setName(e.target.value)} placeholder="Name" />
+            <Input variant="bordered" value={email} type="email" required onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+            <Input variant="bordered" value={subject} type="text" required onChange={(e) => setSubject(e.target.value)} placeholder="Subject" />
+            <Textarea variant="bordered" value={content} type="text" required onChange={(e) => setContent(e.target.value)} placeholder="Content" />
+            <Button disabled={submitting} onClick={() => submitForm()} color="success">{submitting ? (
+                <><Loader2 className="w-4 h-4 animate-spin" />Sending</> 
+            ) : (
+                <>Send</>
+            )}</Button>
+        </form>
         </>
     )
 }

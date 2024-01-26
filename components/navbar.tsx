@@ -14,9 +14,13 @@ import { Link } from "@nextui-org/react";
 import { ThemeSwitch } from "@/components/theme-switch";
 import NextLink from "next/link";
 import { Mail } from "lucide-react";
-import { useRouter } from 'next/router';
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
+	const pathname = usePathname();
+	const getLinkClass = (path: string) => {
+        return pathname === path ? 'underline underline-offset-8' : '';
+    }
 
 	return (
 		<NextUINavbar isBordered>
@@ -25,13 +29,13 @@ export const Navbar = () => {
 			</NavbarContent>
 			<NavbarContent className="hidden sm:flex gap-4 clash font-medium" justify="center">
 				<NavbarBrand>
-					<NextLink href="/">Home</NextLink>
+					<NextLink href="/" className={getLinkClass('/')}>Home</NextLink>
 				</NavbarBrand>
 				<NavbarItem>
-					<NextLink href="/blog">Blog</NextLink>
+					<NextLink href="/blog" className={getLinkClass('/blog')}>Blog</NextLink>
 				</NavbarItem>
 				<NavbarItem>
-					<NextLink href="/projects">Projects</NextLink>
+					<NextLink href="/projects" className={getLinkClass('/projects')}>Projects</NextLink>
 				</NavbarItem>
 			</NavbarContent>
 

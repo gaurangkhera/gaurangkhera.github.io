@@ -22,14 +22,24 @@ export default function ProjectsPage() {
             .then(data => {
                 //@ts-ignore
                 const filteredProjects = data.filter(project => {
-                    const keywords = ["Stratify", "ProjectCrypt", "Astral", "Quill", "Quilljet"];
-                    return keywords.some(keyword => project.name.includes(keyword));
+                    const excludedProjects = ['airbnb-clone-nextjs', 'gaurangkhera.github.io', 'Flask-todo-list', 'movies.search'];
+                    return project.description && project.description.trim() !== '' && !excludedProjects.includes(project.name);
                 });
+
+                // Sort the projects by name in title case
+                filteredProjects.sort((a: any, b: any) => {
+                    const nameA = a.name.replace(/[^a-zA-Z0-9 ]/g, " ").toLowerCase();
+                    const nameB = b.name.replace(/[^a-zA-Z0-9 ]/g, " ").toLowerCase();
+                    if (nameA < nameB) return -1;
+                    if (nameA > nameB) return 1;
+                    return 0;
+                });
+
                 setProjects(filteredProjects);
             });
     }, []);
     return (
-        <div>
+        <div className='my-4'>
             <h1 className={clsx(title(), 'clash')}>My projects</h1>
             <p className={subtitle()}>I&apos;ve built a variety of projects over the years. From simple ecommerce platforms, to complex SaaS apps, I&apos;ve built them all. You can check out a few of my projects here.</p>
             <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-4 mt-16'>
@@ -37,7 +47,11 @@ export default function ProjectsPage() {
                     <Card key={project.id} className="max-w-[400px]">
                         <CardHeader className="gap-3">
                             <div className="flex flex-col">
-                                <p className="font-semibold text-md clash">{project.name}</p>
+                                {project.name !== 'Concise.ai' && project.name !== 'prompt.app' ? (
+                                    <p className="font-semibold text-md clash capitalize">{project.name.replace("-", " ")}</p>
+                                ) : (
+                                    <p className="font-semibold text-md clash">{project.name.replace("-", " ")}</p>
+                                )}
                             </div>
                         </CardHeader>
                         <Divider/>
