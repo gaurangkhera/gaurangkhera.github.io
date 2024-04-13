@@ -1,8 +1,9 @@
-import { BackgroundBeams } from "@/components/background-beams";
+
 import Heading from "@/components/heading";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Globe } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Metadata } from "next";
 import Link from "next/link";
 
 export default function Home() {
