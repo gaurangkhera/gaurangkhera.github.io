@@ -19,12 +19,10 @@ export default function Home() {
               I&apos;m a student and software engineer based in India. I enjoy playing basketball, math and coding. I&apos;m currently working on a few projects, including this website.
             </p>
           </div>
-          <Link href="/about">
-            <a className={cn(buttonVariants({ 
+          <Link href="/about" className={cn(buttonVariants({ 
               size: "lg"
             }), "relative group z-10 gap-2")}>
               Get to know me <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-all" />
-            </a>
           </Link>
         </div>
       </div>
